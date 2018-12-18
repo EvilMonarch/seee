@@ -34,7 +34,7 @@ form.addEventListener('submit', (e) => {
 
     subject.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).get()
         .then(function (doc) {
-            
+
             if (week == "week01" && doc.data().week01[0] == code) {
                 let dt = []
                 dt = doc.data().week01
@@ -43,8 +43,13 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week01: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
+
+                
             }
             else if (week == "week02" && doc.data().week02[0] == code) {
                 let dt = []
@@ -54,8 +59,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week02: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week03" && doc.data().week03[0] == code) {
                 let dt = []
@@ -65,8 +73,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week03: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week04" && doc.data().week04[0] == code) {
                 let dt = []
@@ -76,8 +87,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week04: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week05" && doc.data().week05[0] == code) {
                 let dt = []
@@ -87,8 +101,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week05: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week06" && doc.data().week06[0] == code) {
                 let dt = []
@@ -98,8 +115,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week06: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week07" && doc.data().week07[0] == code) {
                 let dt = []
@@ -109,8 +129,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week07: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week08" && doc.data().week08[0] == code) {
                 let dt = []
@@ -120,8 +143,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week08: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week09" && doc.data().week09[0] == code) {
                 let dt = []
@@ -131,8 +157,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week09: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week10" && doc.data().week10[0] == code) {
                 let dt = []
@@ -142,8 +171,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week10: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week11" && doc.data().week11[0] == code) {
                 let dt = []
@@ -153,8 +185,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week11: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week12" && doc.data().week12[0] == code) {
                 let dt = []
@@ -164,8 +199,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week12: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week13" && doc.data().week13[0] == code) {
                 let dt = []
@@ -175,8 +213,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week13: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week14" && doc.data().week14[0] == code) {
                 let dt = []
@@ -186,8 +227,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week14: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week15" && doc.data().week15[0] == code) {
                 let dt = []
@@ -197,8 +241,11 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week15: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
             else if (week == "week16" && doc.data().week16[0] == code) {
                 let dt = []
@@ -208,14 +255,17 @@ form.addEventListener('submit', (e) => {
                 db.collection('teacher').doc(teacher).collection('subject').doc(localStorage.getItem("namecourse")).update({
                     week16: dt
                 })
-                alert("ลงชื่อเรียบร้อย");
+                var delayInMilliseconds = 1500; //1 second
+                setTimeout(function () {
+                    alert("ลงชื่อเรียบร้อย");
                 window.location.href = "check.html";
+                }, delayInMilliseconds);
             }
-            else{
+            else {
                 alert("กรอก code ผิดพลาด");
                 window.location.href = "check2.html";
             }
-            
+
 
         });
 

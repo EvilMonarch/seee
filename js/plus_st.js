@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
 
     test3(0)
     test3(5)
-    var delayInMilliseconds = 5000; //1 second
+    var delayInMilliseconds = 4500; //1 second
 
     setTimeout(function () {
         alert("เพิ่มนักศึกษาเรียบร้อย");
