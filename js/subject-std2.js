@@ -41,7 +41,7 @@ db.collection('teacher').get().then(snapshot => {
 });
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
+  
   
   var nameteacher = localStorage.getItem("nameteacher")
   var id = localStorage.getItem("id")
@@ -51,7 +51,10 @@ form.addEventListener('submit', (e) => {
   var year = document.getElementById("select3").value
   var type = document.getElementById("select4").value
   var detail = document.getElementById("detail").value
-
+  if(day=="00" || time=="00"|| year=="00"||detail==""){
+    alert("กรอกข้อมูลไม่ครบ");
+  }
+  else{
   db.collection('teacher').doc(localStorage.getItem("teacher")).collection('subject').doc(localStorage.getItem("namecourse")).collection(localStorage.getItem("week")).doc(day+time+year+localStorage.getItem("id")).set({
 
       detail:detail,
@@ -64,6 +67,6 @@ form.addEventListener('submit', (e) => {
       year: year
 
   });
-
+  }
 })
 

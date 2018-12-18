@@ -13,6 +13,7 @@ db.settings({ timestampsInSnapshots: true });
   if(localStorage.getItem('id')==""){
     window.location.href="login.html";
   }
+  
 subject.collection('students').doc(localStorage.getItem('id')).collection('subject')
 .onSnapshot(function (doc) {
   var num = 0;
@@ -31,8 +32,12 @@ subject.collection('students').doc(localStorage.getItem('id')).collection('subje
 function createSubject(namecourse, nameteacher, room, time,passcourse,day, num,teacher) {
 
   html = ''
-  html += '<div>'
-  html += '<div class="description">'
+  html += '<div><br>'
+  html += '<p>'
+  html += '<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample'+num+'" role="button" aria-expanded="false" aria-controls="collapseExample">'
+  html += passcourse+' ' +namecourse
+  html += '</a></p>'
+  html += '<div class="collapse" id="collapseExample'+num+'">'
   html += '<div class="wrapper">'
   html += '<div class="information"><span class="label">รหัสวิชา : </span>'
   html += '<p class="text" id="passcourse_'+num+'">' + passcourse+ '</p>'

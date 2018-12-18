@@ -83,6 +83,9 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                         var num2 = data.data().week01.length - 1
                         $('#list-subject').append(createSubject(data.data().week01[num2])
                         )
+
+
+
                     }
                     if (data.data().week02.length - 1 != 0 && data.data().week02[data.data().week02.length - 1] != 'STOP') {
                         var num2 = data.data().week02.length - 1
@@ -161,6 +164,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                     }
                 }
             })
+     
     })
 
 function createSubject(week) {
@@ -169,9 +173,9 @@ function createSubject(week) {
     html += '<div>'
     html += '<div class="description">'
     html += '<div class="wrapper">'
-    
-        html += '<p class="text" id="passcourse">' + week + '</p>'
-    
+
+    html += '<p class="text" id="passcourse">' + week + '</p>'
+
     html += '</div>'
     html += '</div></div></div>'
 
@@ -195,6 +199,7 @@ form.addEventListener('submit', (e) => {
                 })
             });
     }
+
     if (localStorage.getItem('week') == 'week02') {
         firebase.firestore().collection('teacher').doc(localStorage.getItem('id')).collection('subject').doc(localStorage.getItem("namecourse")).get()
             .then(function (doc) {
@@ -388,7 +393,7 @@ form.addEventListener('submit', (e) => {
             });
     }
 
-    
+
 
     var delayInMilliseconds = 1500; //1 second
 

@@ -24,9 +24,11 @@ db.collection('teacher').doc(localStorage.getItem("id")).collection('subject').d
                 
                
                     let li = document.createElement('li');
+                    
                     let namecourse = document.createElement('span');
                     let day = document.createElement('span');
                     let true1 = document.createElement('span');
+                    
                     li.setAttribute('data-id', doc.id);
                     day.textContent = doc.data().day+' '+doc.data().time+' '+doc.data().year+' : '+doc.data().type;
                     namecourse.textContent = day.textContent+' : '+doc.data().id;
@@ -40,6 +42,7 @@ db.collection('teacher').doc(localStorage.getItem("id")).collection('subject').d
 
                             li.appendChild(namecourse);
                             li.appendChild(true1);
+                            
                             cafeList.appendChild(li);
                         });
 

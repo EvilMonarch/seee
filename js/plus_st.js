@@ -17,9 +17,6 @@ function test(dt) {
     db.collection('teacher').doc(localStorage.getItem('id')).collection('subject').doc(localStorage.getItem("namecourse")).update({
         student: dt
     })
-
-
-
 }
 
 function test3(i) {

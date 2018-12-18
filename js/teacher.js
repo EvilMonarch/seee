@@ -89,7 +89,7 @@ function ChooseFunction(num, id) {
   localStorage.setItem("time", document.getElementById("time_" + id).innerHTML)
   localStorage.setItem("room", document.getElementById("room_" + id).innerHTML)
   localStorage.setItem("week", document.getElementById("week" + id).value)
-
+  localStorage.setItem("check", "true")
   if (num == 1) {
     window.location.href = "blog1.html";
   }
