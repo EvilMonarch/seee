@@ -85,7 +85,7 @@ subject.collection('students')
 function createSubject(num,id,name) {
 
     html = ''
-    html += '<div class="name'+num+'">'
+    html += '<div class="name">'
 											
     html += '<input id="type'+num+'" type="checkbox" value="'+id+'"> '+id+' : '+name+'<br>'
 
