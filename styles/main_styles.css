@@ -1245,6 +1245,7 @@ section
 }
 .counter_input:not(:last-child)
 {
+	text-align: center;
 	margin-bottom: 10px;
 }
 .counter_text_input
