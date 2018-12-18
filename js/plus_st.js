@@ -25,7 +25,7 @@ function test(dt) {
 }
 
 function test3(i) {
-    if (i < 1 ) return;
+    if (i < 1) return;
     setTimeout(function () {
 
         if (document.getElementById("type" + i.toString()).checked) {
@@ -51,8 +51,8 @@ function test3(i) {
                 room: room
             });
             var subject = firebase.firestore();
-            
-            
+
+
             subject.collection('teacher').doc(localStorage.getItem('id')).collection('subject').doc(localStorage.getItem("namecourse")).get()
                 .then(function (doc) {
                     let dt = []
@@ -70,28 +70,37 @@ function test3(i) {
 
 var subject = firebase.firestore();
 subject.collection('students')
-.onSnapshot(function (doc) {
-  var num = 0;
-  doc.docs
-  
-    .forEach(data => {
-      
-        num = num+1;
-        $('#subject-std').append(createSubject(num,data.data().id,data.data().name)
-        )
-      
+    .onSnapshot(function (doc) {
+        var num = 0;
+        doc.docs
+
+            .forEach(data => {
+
+                num++;
+                if (num == 1) {
+                    $('#subject-std').append(createSubject(num, data.data().id, data.data().name)
+                    )
+                } else {
+
+                    $('#subject-std').append(createSubject(num, data.data().id, data.data().name))
+            num = 0;
+        
+    }
+        
+        
+        
     })
 })
-function createSubject(num,id,name) {
+function createSubject(num, id, name) {
 
     html = ''
-    html += '<div class="name">'
-											
-    html += '<input id="type'+num+'" type="checkbox" value="'+id+'"> '+id+' : '+name+'<br>'
+    html += '<div class="name' + num + '">'
 
-						
+    html += '<input id="type' + num + '" type="checkbox" value="' + id + '"> ' + id + ' : ' + name + '<br>'
+
+
     html += '</div>'
-    
-  
+
+
     return html
-  }
+}
