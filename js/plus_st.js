@@ -9,7 +9,12 @@ form.addEventListener('submit', (e) => {
 
     test3(0)
     test3(5)
+    var delayInMilliseconds = 5000; //1 second
 
+    setTimeout(function () {
+        alert("เพิ่มนักศึกษาเรียบร้อย");
+        window.location.href = "blog1.html";
+    }, delayInMilliseconds);
 
 })
 function test(dt) {
@@ -50,23 +55,43 @@ function test3(i) {
             
             subject.collection('teacher').doc(localStorage.getItem('id')).collection('subject').doc(localStorage.getItem("namecourse")).get()
                 .then(function (doc) {
-
                     let dt = []
                     dt = doc.data().student
                     dt.push(std)
-
                     test(dt)
-
                 });
-            
         }
         test3(--i);
-
 
     }, 1000);
 
 
 }
 
+var subject = firebase.firestore();
+subject.collection('students')
+.onSnapshot(function (doc) {
+  var num = 0;
+  doc.docs
+  
+    .forEach(data => {
+      
+        num = num+1;
+        $('#subject-std').append(createSubject(num,data.data().id,data.data().name)
+        )
+      
+    })
+})
+function createSubject(num,id,name) {
 
+    html = ''
+    html += '<div class="name'+num+'">'
+											
+    html += '<input id="type'+num+'" type="checkbox" value="'+id+'"> '+id+' : '+name+'<br>'
 
+						
+    html += '</div>'
+    
+  
+    return html
+  }
