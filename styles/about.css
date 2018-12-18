@@ -737,11 +737,13 @@ section
 {
 	max-width: 600px;
 	margin: 0 auto;
-	font
+
 
 }
 .section_title
 {
+	margin: .5em;
+	color: white;
 	line-height: 1.2;
 }
 .section_subtitle
@@ -821,7 +823,7 @@ section
 }
 .about_row
 {
-	margin-top: 56px;
+	margin-top: 25px;
 }
 .about_col_left
 {

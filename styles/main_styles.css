@@ -50,10 +50,10 @@
 body
 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: #736f6f;
 }
 div
 {
@@ -458,6 +458,16 @@ section
 	height: 2px;
 	background: #14bdee;
 	content: '';
+}
+.name1{
+	margin: .25em;
+	background: aliceblue;
+	padding: .5em;
+}
+.name2{
+	margin: .25em;
+	background: white;
+	padding: .5em;
 }
 .search_button
 {

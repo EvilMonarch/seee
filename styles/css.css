@@ -44,7 +44,9 @@
 .text{
 	font-style: italic;
 }
-
+.text_title{
+	font-size: 35px;
+}
 .information{
 	padding: 0.65em 0;
 }
