@@ -18,7 +18,7 @@ const cafeList = document.querySelector('#cafe-list');
 const form = document.querySelector('#course3');
 
 // create element & render cafe
-function renderCafe(doc){
+function renderCafe(doc) {
   let li = document.createElement('li');
   let name = document.createElement('span');
   let city = document.createElement('span');
@@ -30,19 +30,19 @@ function renderCafe(doc){
   li.appendChild(name);
   li.appendChild(city);
 
- 
+
 }
 
 // getting data
 db.collection('teacher').get().then(snapshot => {
   snapshot.docs.forEach(doc => {
-      renderCafe(doc);
+    renderCafe(doc);
   });
 });
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  
-  
+
+
   var nameteacher = localStorage.getItem("nameteacher")
   var id = localStorage.getItem("id")
   var week = localStorage.getItem("week")
@@ -51,27 +51,27 @@ form.addEventListener('submit', (e) => {
   var year = document.getElementById("select3").value
   var type = document.getElementById("select4").value
   var detail = document.getElementById("detail").value
-  if(day=="00" || time=="00"|| year=="00"||detail==""){
+  if (day == "00" || time == "00" || year == "00" || detail == "") {
     alert("กรอกข้อมูลไม่ครบ");
   }
-  else{
-  db.collection('teacher').doc(localStorage.getItem("teacher")).collection('subject').doc(localStorage.getItem("namecourse")).collection(localStorage.getItem("week")).doc(day+time+year+localStorage.getItem("id")).set({
+  else {
+    db.collection('teacher').doc(localStorage.getItem("teacher")).collection('subject').doc(localStorage.getItem("namecourse")).collection(localStorage.getItem("week")).doc(day + time + year + localStorage.getItem("id")).set({
 
-      detail:detail,
-      id:id,
-      type:type,
+      detail: detail,
+      id: id,
+      type: type,
       nameteacher: nameteacher,
       week: week,
       day: day,
       time: time,
       year: year
 
-  });
-  var delayInMilliseconds = 1000; //1 second
-                setTimeout(function () {
-                    alert("ส่งเรื่องการลาเรียบร้อย");
-                window.location.href = "check.html";
-                }, delayInMilliseconds);
+    });
+    var delayInMilliseconds = 1000; //1 second
+    setTimeout(function () {
+      alert("ส่งเรื่องการลาเรียบร้อย");
+      window.location.href = "check.html";
+    }, delayInMilliseconds);
   }
 })
 
