@@ -67,6 +67,11 @@ form.addEventListener('submit', (e) => {
       year: year
 
   });
+  var delayInMilliseconds = 1000; //1 second
+                setTimeout(function () {
+                    alert("ส่งเรื่องการลาเรียบร้อย");
+                window.location.href = "check.html";
+                }, delayInMilliseconds);
   }
 })
 
