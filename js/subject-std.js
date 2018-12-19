@@ -58,7 +58,7 @@ function createSubject(namecourse, nameteacher, room, time,passcourse,day, num,t
   html += '<input type="hidden" id="teacher_'+num+'" value="'+teacher +'">' 
   html += '</div>'
   html += '<hr> '
-  html += 'เลือกสัปดาห์ที่ทำการเช็ค       <select name="week" id="week'+num+'">'
+  html += 'เลือกสัปดาห์ที่ทำการเช็ค/ลา       <select name="week" id="week'+num+'">'
   html += '<option value="week01">1</option>       <option value="week02">2</option>        <option value="week03">3 </option>       <option value="week04">4</option>'
   html += '<option value="week05">5</option> <option value="week06">6</option><option value="week07">7</option>'
   html += '<option value="week08">8</option><option value="week09">9</option><option value="week10">10</option>'
