@@ -67,7 +67,13 @@ form.addEventListener('submit', (e) => {
     form.day.value = '';
     form.time.value = '';
     form.room.value = '';
-    alert("สร้างคอร์สเรียบร้อย");
+    
+    var delayInMilliseconds = 1500; //1 second
+
+    setTimeout(function () {
+        alert("สร้างคอร์สเรียบร้อย");
+        window.location.href = "contact.html";
+    }, delayInMilliseconds);
 }
 else {
     alert("กรอกข้อมูลไม่ครบ");

@@ -79,8 +79,9 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
             .forEach(data => {
 
                 if (data.data().namecourse == localStorage.getItem('namecourse')) {
-                    if (data.data().week01.length - 1 != 0 && data.data().week01[data.data().week01.length - 1] != 'STOP') {
+                    if (data.data().week01.length - 1 != 0 && data.data().week01[data.data().week01.length - 1] != 'STOP' && localStorage.getItem("week")=="week01") {
                         var num2 = data.data().week01.length
+                        console.log("55")
                         if(localStorage.getItem("check")=="true"){
                         for(i=1;i<num2;i++)
                         $('#list-subject').append(createSubject(data.data().week01[i])
@@ -88,13 +89,15 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                         localStorage.setItem("check", "false")
                         }else{
                             $('#list-subject').append(createSubject(data.data().week01[num2-1]))
+                            
                         }
 
 
 
                     }
-                    if (data.data().week02.length - 1 != 0 && data.data().week02[data.data().week02.length - 1] != 'STOP') {
+                    if (data.data().week02.length - 1 != 0 && data.data().week02[data.data().week02.length - 1] != 'STOP' && localStorage.getItem("week")=="week02") {
                         var num2 = data.data().week02.length - 1
+                        console.log("55")
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
                             $('#list-subject').append(createSubject(data.data().week02[i])
@@ -104,7 +107,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week02[num2-1]))
                             }
                     }
-                    if (data.data().week03.length - 1 != 0 && data.data().week03[data.data().week03.length - 1] != 'STOP') {
+                    if (data.data().week03.length - 1 != 0 && data.data().week03[data.data().week03.length - 1] != 'STOP' && localStorage.getItem("week")=="week03") {
                         var num2 = data.data().week03.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -115,7 +118,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week03[num2-1]))
                             }
                     }
-                    if (data.data().week04.length - 1 != 0 && data.data().week04[data.data().week04.length - 1] != 'STOP') {
+                    if (data.data().week04.length - 1 != 0 && data.data().week04[data.data().week04.length - 1] != 'STOP' && localStorage.getItem("week")=="week04") {
                         var num2 = data.data().week04.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -126,7 +129,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week04[num2-1]))
                             }
                     }
-                    if (data.data().week05.length - 1 != 0 && data.data().week05[data.data().week05.length - 1] != 'STOP') {
+                    if (data.data().week05.length - 1 != 0 && data.data().week05[data.data().week05.length - 1] != 'STOP' && localStorage.getItem("week")=="week05") {
                         var num2 = data.data().week01.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -137,7 +140,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week05[num2-1]))
                             }
                     }
-                    if (data.data().week06.length - 1 != 0 && data.data().week06[data.data().week06.length - 1] != 'STOP') {
+                    if (data.data().week06.length - 1 != 0 && data.data().week06[data.data().week06.length - 1] != 'STOP' && localStorage.getItem("week")=="week06") {
                         var num2 = data.data().week06.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -148,7 +151,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week06[num2-1]))
                             }
                     }
-                    if (data.data().week07.length - 1 != 0 && data.data().week07[data.data().week07.length - 1] != 'STOP') {
+                    if (data.data().week07.length - 1 != 0 && data.data().week07[data.data().week07.length - 1] != 'STOP' && localStorage.getItem("week")=="week07") {
                         var num2 = data.data().week07.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -159,7 +162,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week07[num2-1]))
                             }
                     }
-                    if (data.data().week08.length - 1 != 0 && data.data().week08[data.data().week08.length - 1] != 'STOP') {
+                    if (data.data().week08.length - 1 != 0 && data.data().week08[data.data().week08.length - 1] != 'STOP' && localStorage.getItem("week")=="week08") {
                         var num2 = data.data().week08.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -170,7 +173,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week08[num2-1]))
                             }
                     }
-                    if (data.data().week09.length - 1 != 0 && data.data().week09[data.data().week09.length - 1] != 'STOP') {
+                    if (data.data().week09.length - 1 != 0 && data.data().week09[data.data().week09.length - 1] != 'STOP' && localStorage.getItem("week")=="week09") {
                         var num2 = data.data().week09.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -181,7 +184,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week09[num2-1]))
                             }
                     }
-                    if (data.data().week10.length - 1 != 0 && data.data().week10[data.data().week10.length - 1] != 'STOP') {
+                    if (data.data().week10.length - 1 != 0 && data.data().week10[data.data().week10.length - 1] != 'STOP' && localStorage.getItem("week")=="week10") {
                         var num2 = data.data().week10.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -192,7 +195,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week10[num2-1]))
                             }
                     }
-                    if (data.data().week11.length - 1 != 0 && data.data().week11[data.data().week11.length - 1] != 'STOP') {
+                    if (data.data().week11.length - 1 != 0 && data.data().week11[data.data().week11.length - 1] != 'STOP' && localStorage.getItem("week")=="week11") {
                         var num2 = data.data().week11.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -203,7 +206,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week11[num2-1]))
                             }
                     }
-                    if (data.data().week12.length - 1 != 0 && data.data().week12[data.data().week12.length - 1] != 'STOP') {
+                    if (data.data().week12.length - 1 != 0 && data.data().week12[data.data().week12.length - 1] != 'STOP' && localStorage.getItem("week")=="week12") {
                         var num2 = data.data().week12.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -214,7 +217,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week12[num2-1]))
                             }
                     }
-                    if (data.data().week13.length - 1 != 0 && data.data().week13[data.data().week13.length - 1] != 'STOP') {
+                    if (data.data().week13.length - 1 != 0 && data.data().week13[data.data().week13.length - 1] != 'STOP' && localStorage.getItem("week")=="week13") {
                         var num2 = data.data().week13.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -225,7 +228,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week13[num2-1]))
                             }
                     }
-                    if (data.data().week14.length - 1 != 0 && data.data().week14[data.data().week14.length - 1] != 'STOP') {
+                    if (data.data().week14.length - 1 != 0 && data.data().week14[data.data().week14.length - 1] != 'STOP' && localStorage.getItem("week")=="week14") {
                         var num2 = data.data().week14.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -236,7 +239,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week14[num2-1]))
                             }
                     }
-                    if (data.data().week15.length - 1 != 0 && data.data().week15[data.data().week15.length - 1] != 'STOP') {
+                    if (data.data().week15.length - 1 != 0 && data.data().week15[data.data().week15.length - 1] != 'STOP' && localStorage.getItem("week")=="week15") {
                         var num2 = data.data().week15.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
@@ -247,7 +250,7 @@ subject.collection('teacher').doc(localStorage.getItem('id')).collection('subjec
                                 $('#list-subject').append(createSubject(data.data().week15[num2-1]))
                             }
                     }
-                    if (data.data().week16.length - 1 != 0 && data.data().week16[data.data().week16.length - 1] != 'STOP') {
+                    if (data.data().week16.length - 1 != 0 && data.data().week16[data.data().week16.length - 1] != 'STOP' && localStorage.getItem("week")=="week16") {
                         var num2 = data.data().week16.length - 1
                         if(localStorage.getItem("check")=="true"){
                             for(i=1;i<num2;i++)
